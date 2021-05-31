@@ -4,6 +4,7 @@
   width: 85vw;
   margin: 0 auto;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -11,6 +12,9 @@
   width: 85vw;
   margin: 0 auto;
   padding: 10px;
+}
+.card {
+  min-height: 270px;
 }
 .randomButton {
   display: flex;
@@ -22,6 +26,10 @@
   border: none;
   color: rgb(109, 109, 109);
   font-weight: bolder;
+}
+.randomButton:hover {
+  opacity: 0.9;
+  cursor: pointer;
 }
 .icon {
   font-size: 20px;

@@ -1,0 +1,26 @@
+.cardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70px;
+  background: rgb(40, 40, 40);
+  width: 90%;
+  padding: 25px 20px;
+  border-radius: 2px;
+  max-width: 500px;
+  color: white;
+}
+.cardContainer:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+.author {
+  margin: 0px 0px;
+}
+.desc {
+  margin: 0;
+  opacity: 0.7;
+}
+.arrow {
+  font-size: 25px;
+}
