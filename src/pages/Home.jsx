@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BsArrowRepeat } from "react-icons/bs";
+import { BsArrowRepeat,BsSun } from "react-icons/bs";
 import  {Link} from "react-router-dom"
 import Quote from '../components/Quote';
 import Card from '../components/Card';
-import '../assets/pages/Home.css'
+import '../assets/pages/Pages.css'
 var randomData = {}
 const Home = () =>{
     const [data,setData] = useState(randomData)
@@ -28,6 +28,7 @@ const Home = () =>{
     return(
         <div>
             <div className="buttonContainer">
+                <button className="randomButton"><BsSun className="icon sun"/></button>
                 <button className="randomButton" onClick={getRandomData}>random <BsArrowRepeat className="icon"/></button>
             </div>
             {randomData.text ? 

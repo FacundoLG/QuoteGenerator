@@ -33,7 +33,23 @@
   opacity: 0.9;
   cursor: pointer;
 }
+.randomButton:hover .icon {
+  transform: rotate(360deg);
+  transition: 500ms;
+}
 .icon {
   font-size: 20px;
   margin: 0px 5px;
+}
+.sun {
+  color: rgb(254, 254, 171);
+  transform: rotate(0deg);
+  transition: 300ms;
+  border-radius: 2px;
+}
+.sun:hover {
+  color: white;
+  background: white;
+  transform: rotate(90deg);
+  border-radius: 10px;
 }

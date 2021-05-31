@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import { BsFillHouseFill } from "react-icons/bs";
+import { BsArrowRepeat } from "react-icons/bs";
 import Quote from '../components/Quote';
 var authorQuotes
 const Quotes = () =>{
@@ -23,7 +23,7 @@ const Quotes = () =>{
     return(
         <>
         <Link className="buttonContainer" to="/">
-            <button className="randomButton">home <BsFillHouseFill className="icon"/></button>
+            <button className="randomButton">random <BsArrowRepeat className="icon"/></button>
         </Link>
         {authorQuotes ?
         <div className="container">
