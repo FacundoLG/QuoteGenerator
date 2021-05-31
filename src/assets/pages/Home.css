@@ -3,9 +3,11 @@
   justify-content: flex-end;
   width: 85vw;
   margin: 0 auto;
+  text-decoration: none;
 }
 
 .container {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;

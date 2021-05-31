@@ -3,7 +3,7 @@ import '../assets/components/Quote.css'
 const Quote = ({text}) =>{
     return(
         <div className="quoteContainer">
-            <p className="quoteText">{text}</p>
+            <p className="quoteText">"{text}"</p>
         </div>
     )
 }
