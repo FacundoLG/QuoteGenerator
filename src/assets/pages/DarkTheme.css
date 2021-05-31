@@ -1,0 +1,11 @@
+.moon {
+  color: white !important;
+  background: white !important;
+  transform: rotate(360deg) !important;
+  border-radius: 10px !important;
+}
+.darkTheme {
+  background: rgb(31, 31, 31);
+  color: white;
+  transition: 200ms;
+}

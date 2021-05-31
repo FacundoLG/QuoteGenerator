@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../assets/components/Quote.css'
-const Quote = ({text}) =>{
+import '../assets/pages/DarkTheme.css'
+const Quote = ({text,qid,isDark}) =>{
+    
+    useEffect(()=>{
+        var dark = document.getElementById(`${qid}`) 
+        dark.classList.toggle("darkTheme")
+    },[isDark,qid])
     return(
-        <div className="quoteContainer">
+        <div id={qid} className="quoteContainer darkTheme">
             <p className="quoteText">"{text}"</p>
         </div>
     )

@@ -7,9 +7,7 @@ var authorQuotes
 const Quotes = () =>{
     var authorName = useParams().name
     const [quotes,setQuotes] = useState([])
-    
-    
-    
+
     useEffect(() => {
         fetch(`https://quote-garden.herokuapp.com/api/v3/quotes?author=${authorName}&limit=20`)
         .then(res => res.json())
@@ -18,7 +16,7 @@ const Quotes = () =>{
             console.log(authorQuotes)
             setQuotes(authorQuotes)
         })
-    }, [])
+    },[authorName])
 
     return(
         <>
@@ -28,7 +26,7 @@ const Quotes = () =>{
         {authorQuotes ?
         <div className="container">
             <h2>{authorName}</h2>
-            {quotes.map((data) => <Quote key={data._id}text={data.quoteText}/>)}
+            {quotes.map((data) => <Quote key={data._id} qid={data._id}text={data.quoteText}/>)}
         </div>: ""}
         </>
     )

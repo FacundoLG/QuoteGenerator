@@ -4,10 +4,12 @@ import  {Link} from "react-router-dom"
 import Quote from '../components/Quote';
 import Card from '../components/Card';
 import '../assets/pages/Pages.css'
+import '../assets/pages/DarkTheme.css'
 var randomData = {}
+var isdark = false
 const Home = () =>{
     const [data,setData] = useState(randomData)
-    
+    const [dark,setDark] = useState(isdark)
     useEffect(() => {
         getRandomData()        
     },[])
@@ -25,16 +27,27 @@ const Home = () =>{
             setData(randomData)
         })
     }
+    const handleTheme = () =>{
+        var sun = document.getElementById("sun")
+        var element = document.body
+        isdark = !isdark
+        setDark(isdark)
+        element.classList.toggle("darkTheme")
+        sun.classList.toggle("moon")
+
+    
+    }
+
     return(
         <div>
             <div className="buttonContainer">
-                <button className="randomButton"><BsSun className="icon sun"/></button>
+                <button className="randomButton" onClick={handleTheme}><BsSun id="sun" className="sun"/></button>
                 <button className="randomButton" onClick={getRandomData}>random <BsArrowRepeat className="icon"/></button>
             </div>
             {randomData.text ? 
             <div>
                 <div className="container card">
-                    <Quote text={data.text}/>
+                    <Quote className="quote" isDark={dark} qid={data.id} text={data.text}/>
                 </div>
                 <Link to={`/author/${data.author}`}  className="container">
                     <Card author={data.author} description={data.genre}/>
