@@ -1,0 +1,13 @@
+.quoteContainer {
+  padding: 5px 10px;
+  padding-left: 20px;
+  width: 500px;
+  margin: 5px auto;
+  border-radius: 4px;
+  background: #fff;
+  border-left: 4px rgb(255, 255, 128) solid;
+}
+.quoteText {
+  background: none;
+  font-size: 22px;
+}
